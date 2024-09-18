@@ -12,7 +12,7 @@ const CategoryView = () => {
     const [ loading , setLoading ] = useState(true) 
 
     useEffect(() => {
-        axios.get("http://localhost:5000/api/items")
+        axios.get("https://vms-backend-ifv8.onrender.com/api/items")
             .then(res => {
                 setMenItems(res.data.filter((item) => item.category === "men"))
                 setKidsItems(res.data.filter((item) => item.category === "kids" ))

@@ -11,7 +11,7 @@ const Home = () => {
     TabTitle("Home - Poornima's Fasion Collections");
 
     useEffect(() => {
-        axios.get("http://localhost:5000/api/items")
+        axios.get("https://vms-backend-ifv8.onrender.com/api/items")
             .then(res => setFeaturedItems(res.data))
             .catch(err => console.log(err))
 

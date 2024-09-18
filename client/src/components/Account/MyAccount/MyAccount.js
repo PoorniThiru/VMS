@@ -23,7 +23,7 @@ const MyAccount = () => {
 
    
     useEffect(()=>{
-        axios.post("http://localhost:5000/invoicelist",{user_id})
+        axios.post("https://vms-backend-ifv8.onrender.com/invoicelist",{user_id})
         .then((res)=>{
             
            setinvoicedatas(res.data)

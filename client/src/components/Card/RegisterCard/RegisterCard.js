@@ -14,7 +14,7 @@ const RegisterCard = () => {
 
      const handleSubmit=(e)=>{
         e.preventDefault()
-        axios.post("http://localhost:5000/register",{firstname,lastname,email,password})
+        axios.post("https://vms-backend-ifv8.onrender.com/register",{firstname,lastname,email,password})
         .then(result=>{console.log(result)
             alert("Register Success");
             navigate('/account/login')

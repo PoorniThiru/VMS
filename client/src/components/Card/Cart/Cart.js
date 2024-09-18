@@ -84,7 +84,7 @@ const Cart = () => {
               
               var booking_id="poorni" +Math.floor(Math.random() * 9999)
               var data={user_id:getUserData(),items:cartItems.items,totalAmount:cartItems.totalAmount,payment_id:response.razorpay_payment_id,booking_id:booking_id,date:date1.toISOString().split('T')[0]}
-              axios.post("http://localhost:5000/invoicedata",data)
+              axios.post("https://vms-backend-ifv8.onrender.com/invoicedata",data)
               .then((res)=>{
                 cartItems.items=[];
                 handleaddressclose()
